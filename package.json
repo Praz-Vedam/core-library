@@ -1,0 +1,48 @@
+{
+  "name": "@vedam-dev/core-library",
+  "version": "0.1.0",
+  "description": "Shared API client and auth utilities for Vedam LMS portals (admin, student, mobile)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Praz-Vedam/core-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Praz-Vedam/core-library/issues"
+  },
+  "homepage": "https://github.com/Praz-Vedam/core-library#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "prepack": "yarn build:lib",
+    "build": "tsc",
+    "build:lib": "tsc -p ./tsconfig.lib.json",
+    "watch": "tsc -w",
+    "clean": "rm -rf dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/node": "^20.17.6",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.1.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.0"
+  }
+}
